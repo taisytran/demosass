@@ -1,0 +1,94 @@
+@import '_variables'
+@import '_reset'
+@import '_grid'
+
+.tag__plate
+  position: relative
+  background: url($bgimg-tag-url) no-repeat center center
+  background-size: cover
+  height: 200px
+  width: auto
+  margin: 0;
+  padding: 0;
+
+  .plate__type
+      position: absolute
+        display: inline-block
+      width: 5.0em
+      height: 1.5em
+      bottom: 0px
+      padding: 5px
+      background: $bgcolor-tag
+      color: $color-tag
+      
+  .plate__icon
+    position: absolute
+      display: inline-block
+    width: 2.5em
+    height: 2.5em
+    margin-right: .5em
+    border: solid 1px $bgcolor-tag
+    border-radius: 50%
+    padding: 1px 1px 1px 1px
+    vertical-align: middle
+    // custom
+    right: 0px
+    margin-top: 1.0em
+    margin-right: 1.0em
+    background: $bgcolor-tag
+    color: $color-tag 
+
+    .icon__inner
+      display: table
+      width: 100%
+      text-align: center
+
+      .icon__image
+        display: table-cell
+        width: 1.5em
+        height: 2.5em
+        vertical-align: middle
+        // font-color: black
+        
+        &:after
+          font-size: 1.5em
+          font-family: 'stayjapan-icon' !important
+    
+    
+// ==========================
+// Section Article
+// ==========================
+div.section__article
+  .section__element
+    padding: 16px 0
+    // padding: 32px 0
+    
+    .section__element__headline
+      margin: 0px
+      word-wrap: break-word
+      padding: 16px 16px
+    
+      h2#top-header
+        margin: 0px 0px 10px 0px
+        // color: gray
+        font-size: 1.6rem
+        font-weight: bold
+        border: none
+      
+      h3#top-header-note
+        font-size: 1.0rem
+        font-weight: normal
+        color: $bgcolor-tag
+        
+      .section__element__headline__content
+        font-size: 1.4rem
+        // padding: 16px 16px
+      .section__element__headline__post
+        padding-top: 16px
+        font-size: 0.8rem
+         
+      @media only screen and (min-width: $mobile-breakpoint)
+          h2#top-header
+            font-size: 1.2rem
+          .section__element__headline__content
+            font-size: 0.8rem
